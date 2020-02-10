@@ -1,0 +1,36 @@
+build/
+CMakeFiles/
+CMakeScripts/
+**/.DS_Store
+
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Xcode files and folders
+EndlessVoid.xcodeproj
+EndlessVoid.build
+
+#################
+### Libraries ###
+#################
+
+# glad
+/glad/**
+!/glad/include/
+!/glad/src/
+!/glad/CMakeLists.txt
+
+# glfw
+/glfw/**
+!/glfw/CMake/
+!/glfw/deps/
+!/glfw/include/
+!/glfw/src/
+!/glfw/cmake_uninstall.cmake.in
+!/glfw/CMakeLists.txt
+
+# glm
+/glm/**
+!/glm/include/
+!/glm/CMakeLists.txt

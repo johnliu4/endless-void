@@ -16,21 +16,15 @@ EndlessVoid.build
 #################
 
 # glad
-/glad/**
-!/glad/include/
-!/glad/src/
-!/glad/CMakeLists.txt
+/glad/CMakeFiles
+/glad/Makefile
+/glad/*.cmake
+/glad/*.a
 
 # glfw
-/glfw/**
-!/glfw/CMake/
-!/glfw/deps/
-!/glfw/include/
-!/glfw/src/
-!/glfw/cmake_uninstall.cmake.in
-!/glfw/CMakeLists.txt
+/glfw/CMakeFiles
+/glfw/Makefile
+/glfw/*.cmake
 
 # glm
-/glm/**
-!/glm/include/
-!/glm/CMakeLists.txt
+/glm/*.yml

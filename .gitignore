@@ -7,9 +7,12 @@ CMakeCache.txt
 Makefile
 cmake_install.cmake
 
-# Xcode files and folders
+# Xcode
 EndlessVoid.xcodeproj
 EndlessVoid.build
+
+# VS Code
+.vscode/
 
 #################
 ### Libraries ###

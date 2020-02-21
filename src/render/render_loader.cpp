@@ -1,10 +1,9 @@
+#include "render_loader.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
 #include <vector>
-
-#include "render_loader.h"
 
 GLuint load_shader(const char* file_path, const GLuint shader_type) {
 	GLuint shader_id = glCreateShader(shader_type);

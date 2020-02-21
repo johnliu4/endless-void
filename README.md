@@ -16,3 +16,4 @@ I packaged the libraries required right into the source. Here are the libraries 
 - GLFW 3.3.2 for handling the OpenGL context and window creation
 - GLM 0.9.9.7 for handling the math with matrices and vectors
 - GLAD for loading OpenGL
+- lodepng 20190914 for loading PNG files

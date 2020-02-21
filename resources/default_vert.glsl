@@ -1,9 +1,15 @@
 #version 330 core
 
-layout(location = 0) in vec3 vert_pos_modelspace;
+layout(location = 0) in vec3 vert_pos;
+layout(location = 1) in vec2 vert_uv;
 
-uniform mat4 mvp;
+out vec2 uv;
+
+uniform mat4 proj_mat;
+uniform mat4 view_mat;
+uniform mat4 model_mat;
 
 void main() {
-	gl_Position = mvp * vec4(vert_pos_modelspace, 1.0);
+	gl_Position = proj_mat * view_mat * model_mat * vec4(vert_pos, 1.0);
+	uv = vert_uv;
 }

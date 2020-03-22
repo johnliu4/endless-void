@@ -12,7 +12,7 @@ Player::Player() : bounding_box(vec3(0.0f, 0.9f, 0.0f), 0.5f, 1.8f, 0.5f) {
 	yaw_dir = 0.0f;
 	pitch_dir = 0.0f;
 	mouse_sens_mult = 0.001f;
-	max_running_speed = 2.5f;
+	max_running_speed = 6.5f;
 }
 
 Player::~Player() {}

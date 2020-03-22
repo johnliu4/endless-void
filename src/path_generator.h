@@ -45,12 +45,15 @@ private:
 	// pointer to the node farthest back
 	// this node is also where the Void is
 	PathNode* root_node;
-	Player* player;
 	VoidEntity* void_entity;
 
-public:
-	static constexpr GLfloat GRID_CELL_WIDTH = 16.0f;
+	// pathnode that the player is currently on or closest to
+	PathNode* player_node;
+	
+	// finds the player node
+	void find_player_node(Player& player);
 
+public:
 	PathGenerator();
 	~PathGenerator();
 

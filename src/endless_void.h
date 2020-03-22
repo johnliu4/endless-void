@@ -20,7 +20,7 @@ public:
 	static const int TICK_RATE = 30;
 	static constexpr GLfloat TICK_TIME = 1.0f / (GLfloat) TICK_RATE;
 
-	EndlessVoid(int window_width, int window_height);
+	EndlessVoid(unsigned int window_width, unsigned int window_height);
 	~EndlessVoid();
 	void start();
 };

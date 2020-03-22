@@ -7,7 +7,7 @@
 
 class PlatformStone1 : public Platform {
 public:
-    PlatformStone1(glm::vec3 pos);
+    PlatformStone1(glm::ivec3 pos);
     ~PlatformStone1();
 };
 

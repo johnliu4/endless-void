@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 find_package(OpenGL REQUIRED)
+find_package(Freetype REQUIRED)
 
 # setup GLFW
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
@@ -29,8 +30,10 @@ add_executable(EndlessVoid
   src/physics/physics_engine.cpp src/physics/physics_engine.h
 
   src/render/camera.cpp src/render/camera.h
+  src/render/font_manager.cpp src/render/font_manager.h
   src/render/render_engine.cpp src/render/render_engine.h
   src/render/render_entity.cpp src/render/render_entity.h
+  src/render/render_gui.cpp src/render/render_gui.h
   src/render/render_loader.cpp src/render/render_loader.h
   src/render/texture_manager.cpp src/render/texture_manager.h
   src/render/wf_obj_manager.cpp src/render/wf_obj_manager.h
@@ -55,10 +58,12 @@ file(COPY
 target_link_libraries(EndlessVoid
 	OpenGL::GL
 	glfw
-	glad
-  lodepng)
+  glad  
+  lodepng
+  ${FREETYPE_LIBRARIES})
 
 target_include_directories(EndlessVoid PUBLIC
-	${OPENGL_INCLUDE_DIR}
+  ${OPENGL_INCLUDE_DIR}
+  ${FREETYPE_INCLUDE_DIRS}
 	${PROJECT_BINARY_DIR}
 	${PROJECT_BINARY_DIR}/glm/include)

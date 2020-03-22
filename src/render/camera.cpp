@@ -25,7 +25,7 @@ Camera::Camera() {
     view_mat_id = glGetUniformLocation(program_id, "view_mat");
     model_mat_id = glGetUniformLocation(program_id, "model_mat");
 
-    proj_mat = glm::perspective(glm::radians(45.0f), 16.0f / 9.0f, 0.1f, 100.0f);
+    proj_mat = glm::perspective(glm::radians(75.0f), 16.0f / 9.0f, 0.1f, 100.0f);
     view_mat = glm::lookAt(
         vec3(0.0f, 0.0f, 0.0f),
         vec3(1.0f, 0.0f, 0.0f),

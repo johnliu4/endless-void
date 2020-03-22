@@ -2,7 +2,7 @@
 #include <iostream>
 #include <time.h>
 
-EndlessVoid::EndlessVoid(int window_width, int window_height) {
+EndlessVoid::EndlessVoid(unsigned int window_width, unsigned int window_height) {
 	if (!glfwInit()) {
         std::cout << "GLFW failed to initialize." << std::endl;
 		return;
@@ -34,6 +34,7 @@ EndlessVoid::EndlessVoid(int window_width, int window_height) {
 	}
 
 	RenderEngine::init();
+	RenderEngine::get_instance()->set_window_dimensions(window_width, window_height);
 	PhysicsEngine::init();
 	InputManager::init(window);
 }
